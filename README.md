@@ -1,5 +1,5 @@
 
-# broking
+# broking [![Build Status](https://travis-ci.org/NestorHernandezA/broking-website.svg?branch=master)](https://travis-ci.org/NestorHernandezA/broking-website)
 
 ## Project setup
 ```
