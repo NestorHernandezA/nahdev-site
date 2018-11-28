@@ -3,7 +3,7 @@
   "scripts": {
   },
   "env": {
-    "TEST": true
+    "TEST": "MyEnv"
   },
   "formation": {
   },
