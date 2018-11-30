@@ -1,47 +1,18 @@
 <template>
 <v-app id="inspire" dark>
-    <v-navigation-drawer clipped fixed v-model="drawer" app>
-        <v-list dense>
-            <v-list-tile @click="greet">
-                <v-list-tile-action>
-                    <v-icon>dashboard</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-content>
-                    <v-list-tile-title>Dashboard</v-list-tile-title>
-                </v-list-tile-content>
-            </v-list-tile>
-            <v-list-tile @click="greet">
-                <v-list-tile-action>
-                    <v-icon>settings</v-icon>
-                </v-list-tile-action>
-                <v-list-tile-content>
-                    <v-list-tile-title>Settings</v-list-tile-title>
-                </v-list-tile-content>
-            </v-list-tile>
-        </v-list>
-    </v-navigation-drawer>
     <v-toolbar app fixed clipped-left color="primary" class="white--text">
-        <v-toolbar-side-icon @click.stop="drawer = !drawer" class="white--text"></v-toolbar-side-icon>
-        <v-toolbar-title>Broking</v-toolbar-title>
+        <v-toolbar-title>Home</v-toolbar-title>
     </v-toolbar>
     <v-content>
         <v-container fluid fill-height>
             <v-layout justify-center align-center>
-                <v-flex shrink>
-                    <v-tooltip right>
-                        <v-btn icon large target="_blank" slot="activator">
-                            <v-icon large>code</v-icon>
-                        </v-btn>
-                        <span>Source</span>
-                    </v-tooltip>
-                <hello-timeline></hello-timeline>
+                <v-flex>
+                    <home></home>
                 </v-flex>
-                <v-btn color="success">Success</v-btn>
-                <v-btn color="error">Error</v-btn>
-                <v-btn color="warning">Warning</v-btn>
-                <v-btn color="info">Info</v-btn>
+
             </v-layout>
         </v-container>
+        
     </v-content>
     <v-footer app fixed>
         Nestor Hernandez&nbsp;<span>&copy; 2018</span>
@@ -51,12 +22,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import Home from './components/Home'
 
 export default {
     name: 'App',
     components: {
-        'hello-timeline': HelloWorld
+        Home
     },
     data() {
         return {
@@ -73,5 +44,8 @@ export default {
 </script>
 <style lang="stylus">
 .theme--dark.application
-  background:  rgb(160, 160, 160) !important
+  background-image: url('https://source.unsplash.com/collection/2411320/1024x768') !important
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
 </style>
