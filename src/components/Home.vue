@@ -1,19 +1,49 @@
 <template>
-<v-parallax fill-height dark src="https://source.unsplash.com/JL82X5WO_Tg/1600x900">
+<v-parallax fill-height dark src="https://source.unsplash.com/tqzqzH8hb5A/1600x900">
     <v-layout align-center column justify-center>
-        <h1 class="display-2 font-weight-thin mb-3">BroKing</h1>
-        <h4 class="subheading"><v-icon large>code</v-icon>Building tomorrow</h4>
+        <h1 class="display-2 font-weight-thin mb-3">{{welcome}}</h1>
+        <h3 class="subheading">
+            {{iam}} Nestor Hernandez
+        </h3>
     </v-layout>
 </v-parallax>
 </template>
 
 <script>
-export default {
-    name: 'home',
-    data() {
-        return {
-            //
-        }
+const dynamicContent = {
+    spanish : {
+        welcome : 'Bienvenidos!',
+        iam : 'Soy'
+    },
+    english : {
+        welcome : 'Welcome!',
+        iam : 'I am'
     }
 }
+export default {
+    name: 'home',
+    mounted: function () {
+        window.setInterval(() => {
+            if (this.currentLanguage === 'english') {
+                this.welcome = dynamicContent.spanish.welcome
+                this.iam = dynamicContent.spanish.iam;
+                this.currentLanguage = 'spanish'
+            } else {
+                this.welcome = dynamicContent.english.welcome;
+                this.iam = dynamicContent.english.iam;
+                this.currentLanguage = 'english'
+            }
+        }, 3000);
+    },
+    data() {
+        return {
+           currentLanguage: 'english',
+           welcome: dynamicContent.english.welcome,
+           iam: dynamicContent.english.iam
+        }
+    },
+}
 </script>
+<style lang="stylus">
+
+</style>
