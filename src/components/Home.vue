@@ -1,12 +1,11 @@
 <template>
-<v-parallax fill-height dark src="https://source.unsplash.com/tqzqzH8hb5A/1600x900">
-    <v-layout align-center column justify-center>
+    <v-layout align-center column justify-center class="welcome">
         <h1 class="display-2 font-weight-thin mb-3">{{welcome}}</h1>
         <h3 class="subheading">
             {{iam}} Nestor Hernandez
         </h3>
     </v-layout>
-</v-parallax>
+
 </template>
 
 <script>
@@ -45,5 +44,7 @@ export default {
 }
 </script>
 <style lang="stylus">
-
+    .welcome {
+        opacity: 0.6
+    }
 </style>

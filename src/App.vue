@@ -47,7 +47,7 @@ export default {
 </script>
 <style lang="stylus">
 .theme--dark.application {
-  background-image: url('https://source.unsplash.com/collection/2411320/1024x768') !important;
+  background-image: url('https://source.unsplash.com/tqzqzH8hb5A/1600x900') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
