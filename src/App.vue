@@ -9,7 +9,9 @@
         <v-btn flat>
           <router-link to="/about" tag="span" exact :style="{ cursor: 'pointer'}">About</router-link>
         </v-btn>
-        <v-btn flat>Link Two</v-btn>
+        <v-btn flat>
+           <router-link to="/timeline" tag="span" exact :style="{ cursor: 'pointer'}">MyTimeline</router-link>
+        </v-btn>
         <v-btn flat>Link Three</v-btn>
       </v-toolbar-items>
     </v-toolbar>
