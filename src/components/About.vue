@@ -1,5 +1,4 @@
 <template>
-<v-parallax fill-height dark src="https://source.unsplash.com/7LoWpCOAn6k/1600x900">
     <v-layout align-center column justify-center>
         <h1 class="display-2 font-weight-thin mb-3">ABOUT</h1>
         <h4 class="subheading">
@@ -11,7 +10,6 @@
             software like Aldus PageMaker including versions of Lorem Ipsum.
         </h4>
     </v-layout>
-</v-parallax>
 </template>
 
 <script>

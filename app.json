@@ -1,9 +1,31 @@
 {
   "name": "broking-website",
+  "keywords": ["node", "express", "static", "vue"],
   "scripts": {
   },
   "env": {
-    "TEST": "MyEnv"
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
+    "AUTH_ENABLED": {
+      "required": true
+    },
+    "SESSION_SECRET": {
+      "required": true,
+      "generator": "secret"
+    },
+    "OKTA_REDIRECT_URI": {
+      "required": true
+    },
+    "OKTA_ISSUER": {
+      "required": true
+    },
+    "OKTA_CLIENT_SECRET": {
+      "required": true
+    },
+    "OKTA_CLIENT_ID": {
+      "required": true
+    }
   },
   "formation": {
   },

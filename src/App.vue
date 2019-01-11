@@ -9,7 +9,9 @@
         <v-btn flat>
           <router-link to="/about" tag="span" exact :style="{ cursor: 'pointer'}">About</router-link>
         </v-btn>
-        <v-btn flat>Link Two</v-btn>
+        <v-btn flat>
+           <router-link to="/timelines" tag="span" exact :style="{ cursor: 'pointer'}">Timelines</router-link>
+        </v-btn>
         <v-btn flat>Link Three</v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -47,7 +49,7 @@ export default {
 </script>
 <style lang="stylus">
 .theme--dark.application {
-  background-image: url('https://source.unsplash.com/collection/2411320/1024x768') !important;
+  background-image: url('https://source.unsplash.com/tqzqzH8hb5A/1600x900') !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
