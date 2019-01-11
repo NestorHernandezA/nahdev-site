@@ -2,7 +2,6 @@
   "name": "broking-website",
   "keywords": ["node", "express", "static", "vue"],
   "scripts": {
-    "postdeploy": "export OKTA_REDIRECT_URI=https://${HEROKU_APP_NAME}.herokuapp.com/authorization-code/callback"
   },
   "env": {
     "HEROKU_APP_NAME": {
