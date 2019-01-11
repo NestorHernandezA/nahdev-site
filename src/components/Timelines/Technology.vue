@@ -7,15 +7,15 @@
                     <v-icon size="42" class="mr-3">
                         face
                     </v-icon>
-                    <h2 class="display-1 white--text font-weight-light">High School</h2>
+                    <h2 class="display-1 white--text font-weight-light">Number 3</h2>
                 </v-card-title>
                 <v-container>
                     <v-layout>
                         <v-flex xs10>
-                            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+                            2006-2010 - A+ academy, Graduated valedictorian with a GPA of 3.9... to easy
                         </v-flex>
                         <v-flex xs2>
-                            <v-icon size="64">mdi-calendar-text</v-icon>
+                            <v-icon size="64">laugh</v-icon>
                         </v-flex>
                     </v-layout>
                 </v-container>
@@ -30,11 +30,10 @@
                 </v-card-title>
                 <v-container>
                     <v-layout>
-                        <v-flex xs8>
-                            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
-                        </v-flex>
-                        <v-flex xs4>
-                            Lorem ipsum dolor sit amet, no nam oblique veritus.
+                        <v-flex>
+                            2010-2014 - The University of Texas in Dallas, Not as easy lol. <br>
+                            Took a little more dedication and effort to graduate from this great engineering school.
+                            With a degree in Software Engineering.
                         </v-flex>
                     </v-layout>
                 </v-container>
@@ -47,36 +46,35 @@
                     <v-icon dark size="42" class="mr-3">
                         work
                     </v-icon>
-                    <h2 class="display-1 white--text font-weight-light">Working beginnings</h2>
+                    <h2 class="display-1 white--text font-weight-light">Work <h6> (Non Career Oriented)</h6></h2>
                 </v-card-title>
                 <v-container>
                     <v-layout>
                         <v-flex xs10>
-                            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
-                        </v-flex>
-                        <v-flex xs2>
-                            <v-icon size="64">mdi-calendar-text</v-icon>
-                        </v-flex>
+                            
+                            2014-2015 - Blue Beacon Truck Wash, A full blown physical job,
+                            were i started to earn a living for the first time in my life.
+                            </v-flex>
+                            <v-flex xs2>
+                                <v-icon size="64">mdi-calendar-text</v-icon>
+                            </v-flex>
                     </v-layout>
                 </v-container>
             </v-card>
         </v-timeline-item>
 
-
         <v-timeline-item color="secondary" fill-dot left small>
             <v-card>
                 <v-card-title class="primary justify-end">
-                    <h2 class="display-1 mr-3 white--text font-weight-light">Career</h2>
-                    <v-icon dark size="42">local_cafe</v-icon>
+                    <h2 class="display-1 mr-3 white--text font-weight-light">Career Move</h2>
+                    <v-icon dark size="42">flight_land</v-icon>
                 </v-card-title>
                 <v-container>
                     <v-layout>
-                        <v-flex xs8>
-                            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
-                        </v-flex>
-                        <v-flex xs4>
-                            Lorem ipsum dolor sit amet, no nam oblique veritus.
-                        </v-flex>
+                        <v-flex>
+                            2015 - Moved to Indianapolis IN, for my first job using my Software Engineering degree.
+                            2015-Present - Career at TCS, doing Development and Operations
+                        </v-flex> 
                     </v-layout>
                 </v-container>
             </v-card>
@@ -88,12 +86,12 @@
                     <v-icon dark size="42" class="mr-3">
                         directions_run
                     </v-icon>
-                    <h2 class="display-1 white--text font-weight-light">Future Career</h2>
+                    <h2 class="display-1 white--text font-weight-light">Future ..</h2>
                 </v-card-title>
                 <v-container>
                     <v-layout>
                         <v-flex xs10>
-                            Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit.
+                            2019-Present TBD, Lets find Dr. Strange ask what the future holds :) 
                         </v-flex>
                         <v-flex xs2>
                             <v-icon size="64">mdi-calendar-text</v-icon>
@@ -108,7 +106,7 @@
 
 <script>
 export default {
-    name: 'timeline',
+    name: 'technology',
     data() {
         return {
             //

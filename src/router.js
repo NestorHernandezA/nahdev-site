@@ -1,7 +1,7 @@
 import Router from 'vue-router'
 import Home from './components/Home.vue'
 import About from './components/About.vue'
-import Timeline from './components/Timeline.vue'
+import Timelines from './components/Timelines.vue'
 
 export default new Router({
   routes: [
@@ -16,9 +16,9 @@ export default new Router({
       component: About
     },
     {
-      path: '/timeline',
-      name: 'timeline',
-      component: Timeline
+      path: '/timelines',
+      name: 'timelines',
+      component: Timelines
     }
   ]
 })
