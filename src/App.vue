@@ -5,14 +5,14 @@
         <router-link to="/" tag="span" exact :style="{ cursor: 'pointer'}">Home</router-link>
       </v-toolbar-title>
        <v-spacer></v-spacer>
-      <v-toolbar-items class="hidden-sm-and-down">
+      <v-toolbar-items>
         <v-btn flat>
           <router-link to="/about" tag="span" exact :style="{ cursor: 'pointer'}">About</router-link>
         </v-btn>
         <v-btn flat>
            <router-link to="/timelines" tag="span" exact :style="{ cursor: 'pointer'}">Timelines</router-link>
         </v-btn>
-        <v-btn flat>Link Three</v-btn>
+        <v-btn flat>TBD</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
