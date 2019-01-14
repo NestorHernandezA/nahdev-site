@@ -1,4 +1,5 @@
 <template>
+<v-layout column justify-center >
   <v-tabs
     centered
     color="primary"
@@ -22,11 +23,21 @@
       Miscellaneous
       <v-icon>toys</v-icon>
     </v-tab>
-    <v-tab-item :value="'tab-1'"><life></life></v-tab-item>
-    <v-tab-item :value="'tab-2'"><misc></misc></v-tab-item>
-    <v-tab-item :value="'tab-3'"><tech></tech></v-tab-item>
+    <v-tab-item :value="'tab-1'">
+        <v-card flat class="scrollable-card">
+          <life ></life>
+        </v-card>
+      </v-tab-item>
+    <v-tab-item :value="'tab-2'">
+      <v-card flat class="scrollable-card">
+       <misc></misc>
+      </v-card>
+      </v-tab-item>
+    <v-tab-item :value="'tab-3'">
+      <v-card class="scrollable-card"><tech></tech></v-card>
+     </v-tab-item>
   </v-tabs>
-
+</v-layout>
 </template>
 
 <script>
@@ -47,3 +58,11 @@ export default {
     }
 }
 </script>
+<style lang="stylus">
+     .scrollable-card {
+        overflow-y: auto
+        overflow-x: auto
+        height: 550px
+        background-color: rgba(66,66,66,.5) !important
+    }   
+</style>

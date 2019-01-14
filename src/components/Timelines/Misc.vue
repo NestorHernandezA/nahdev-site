@@ -2,7 +2,7 @@
 <v-layout align-center column justify-center>
     <v-timeline>
         <v-timeline-item color="secondary" fill-dot right small>
-            <v-card>
+            <v-card >
                 <v-card-title class="primary">
                     <v-icon size="42" class="mr-3">
                         face
@@ -30,7 +30,7 @@
                 </v-card-title>
                 <v-container>
                     <v-layout>
-                        <v-flex>
+                        <v-flex xs10>
                             2010-2014 - The University of Texas in Dallas, Not as easy lol. <br>
                             Took a little more dedication and effort to graduate from this great engineering school.
                             With a degree in Software Engineering.
@@ -84,9 +84,9 @@
             <v-card>
                 <v-card-title class="primary">
                     <v-icon dark size="42" class="mr-3">
-                        directions_run
+                        clock
                     </v-icon>
-                    <h2 class="display-1 white--text font-weight-light">Future ..</h2>
+                    <h2 class="display-1 white--text font-weight-light">Future</h2>
                 </v-card-title>
                 <v-container>
                     <v-layout>

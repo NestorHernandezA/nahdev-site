@@ -12,16 +12,14 @@
         <v-btn flat>
            <router-link to="/timelines" tag="span" exact :style="{ cursor: 'pointer'}">Timelines</router-link>
         </v-btn>
-        <v-btn flat>TBD</v-btn>
+        <v-btn flat>Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
       <v-container fluid fill-height>
-        <v-layout justify-center align-center>
           <v-flex>
             <router-view/>
           </v-flex>
-        </v-layout>
       </v-container>
     </v-content>
     <v-footer app fixed>
@@ -53,5 +51,8 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+html {
+  overflow: auto
 }
 </style>

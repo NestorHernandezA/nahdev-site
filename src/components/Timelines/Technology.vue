@@ -31,7 +31,7 @@
                 <v-container>
                     <v-layout>
                         <v-flex>
-                            2010-2014 - The University of Texas in Dallas, Not as easy lol. <br>
+                            2010-2014 - The University of Texas in Dallas, Not as easy lol.
                             Took a little more dedication and effort to graduate from this great engineering school.
                             With a degree in Software Engineering.
                         </v-flex>
@@ -114,3 +114,4 @@ export default {
     }
 }
 </script>
+
