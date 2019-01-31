@@ -1,9 +1,9 @@
 <template>
     <v-layout align-center column justify-center class="welcome">
-        <h1 class="display-2 font-weight-thin mb-3">{{welcome}}</h1>
-        <h3 class="subheading">
-            {{iam}} Nestor Hernandez
-        </h3>
+        <h1 class="display-2 font-weight-thin mb-3 font-weight-bold">{{welcome}}</h1>
+        <h2 class="display-1 font-weight-thin mb-3 text-md-center text-sm-center font-weight-medium">
+            I am Nestor Hernandez <br><code>Developer</code> by day <code class="secondary black--text salsero-span">Salsero</code> by night
+        </h2>
     </v-layout>
 
 </template>
@@ -11,12 +11,10 @@
 <script>
 const dynamicContent = {
     spanish : {
-        welcome : 'Bienvenidos!',
-        iam : 'Soy'
+        welcome : 'Bienvenidos!'
     },
     english : {
-        welcome : 'Welcome!',
-        iam : 'I am'
+        welcome : 'Welcome!'
     }
 }
 export default {
@@ -25,11 +23,9 @@ export default {
         window.setInterval(() => {
             if (this.currentLanguage === 'english') {
                 this.welcome = dynamicContent.spanish.welcome
-                this.iam = dynamicContent.spanish.iam;
                 this.currentLanguage = 'spanish'
             } else {
                 this.welcome = dynamicContent.english.welcome;
-                this.iam = dynamicContent.english.iam;
                 this.currentLanguage = 'english'
             }
         }, 3000);
@@ -38,7 +34,6 @@ export default {
         return {
            currentLanguage: 'english',
            welcome: dynamicContent.english.welcome,
-           iam: dynamicContent.english.iam
         }
     },
 }
@@ -46,5 +41,8 @@ export default {
 <style lang="stylus">
     .welcome {
         opacity: 0.6
+    }
+    .salsero-span{
+        font-family: "Comic Sans MS", cursive, sans-serif
     }
 </style>
