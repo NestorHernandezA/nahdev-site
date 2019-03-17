@@ -1,9 +1,9 @@
 <template>
    
-    <v-layout align-center column justify-center>
+    <v-layout align-center column class="about-layout">
          
         <h1 class="display-2 font-weight-thin mb-3">A little about me..</h1>
-         <v-card class="about-card" width="80%">
+                 <v-card class="about-card responsive">
         <h4 class="subheading text-md-center text-sm-center">
             <div class="about-content"><p>
             Born in Mexico, raised in Texas and currently based on Indianapolis. Currently with 4 years of experience on the 
@@ -41,7 +41,7 @@ export default {
 <style lang="stylus">
      .about-card {
         overflow: auto
-        height: 550px
+        width: 80%
         background-color: rgba(66,66,66,.5) !important
     }
     .about-content {
