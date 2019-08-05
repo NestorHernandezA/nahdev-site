@@ -15,7 +15,7 @@
         <v-btn flat>Contact</v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-content class="my-background">
+    <v-content class="codance">
       <v-container fluid fill-height>
           <v-flex>
             <router-view/>
@@ -42,10 +42,9 @@ export default {
   }
 };
 
-//   background-image: url('https://source.unsplash.com/tqzqzH8hb5A/1600x900') !important;
 </script>
 <style lang="stylus">
-.my-background {
+.codance {
   background-image: url('assets/codance.svg') !important;
   background-size: cover;
 }

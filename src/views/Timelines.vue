@@ -41,9 +41,9 @@
 </template>
 
 <script>
-import Life from './Timelines/Life.vue'
-import Technology from './Timelines/Technology.vue'
-import Misc from './Timelines/Misc.vue'
+import Life from '../components/Timelines/Life.vue'
+import Technology from '../components/Timelines/Technology.vue'
+import Misc from '../components/Timelines/Misc.vue'
 export default {
     name: 'timelines',
     components: {
