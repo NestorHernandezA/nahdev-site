@@ -16,10 +16,8 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content class="codance">
-      <v-container fluid fill-height>
-          <v-flex>
+      <v-container fill-height>
             <router-view/>
-          </v-flex>
       </v-container>
     </v-content>
 
