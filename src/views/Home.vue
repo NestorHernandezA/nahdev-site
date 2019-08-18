@@ -1,5 +1,6 @@
 <template>
   <v-layout
+    row
     wrap
     align-center
     class="welcome text-md-center text-sm-center text-xs-center"
@@ -28,32 +29,36 @@
         <span><code class="blue--text">Salsero</code> by night</span>
       </div>
     </v-flex>
+    <v-flex xs12>
+        <contact></contact>
+    </v-flex>
   </v-layout>
 </template>
 
 <script>
 import FunSwitch from "../components/FunSwitch.vue";
+import Contact from "../components/ContactLinks.vue";
 
 export default {
   name: "home",
   components: {
-    FunSwitch
+    FunSwitch,
+    Contact
   },
-  mounted: function() {
-  },
+  mounted: function() {},
   data() {
     return {
       code: true
     };
   },
-  methods:{
-      handleToggle: function(){
-        this.code = !this.code
-        if(!this.code){
-            // Light up dancing
-        }
-        // Light up coding
+  methods: {
+    handleToggle: function() {
+      this.code = !this.code;
+      if (!this.code) {
+        // Light up dancing
       }
+      // Light up coding
+    }
   }
 };
 </script>
