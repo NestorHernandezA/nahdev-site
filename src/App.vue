@@ -1,5 +1,10 @@
 <template>
   <v-app id="inspire" dark>
+        <v-card-actions v-if="!isHome" class="absolute-vertical go-left-wrap">
+        <router-link to="/" class="display-1 go-left" tag="span" exact> 
+        <v-icon large class="pr-3">fa-arrow-left</v-icon><br>home
+      </router-link>
+    </v-card-actions>
     <v-content >
       <v-container fill-height>
         <transition name="page" mode="out-in">
@@ -7,12 +12,11 @@
         </transition>
       </v-container>
     </v-content>
-    <v-card-actions class="absolute-vertical">
-          <router-link to="/about" class="display-1 go-right" tag="span" exact style="opacity: 0.7;cursor: pointer;"> 
-          <v-icon large class="pr-3">fa-arrow-right</v-icon><br>about
-        </router-link>
-</v-card-actions>
-
+    <v-card-actions v-if="isHome"  class="absolute-vertical go-right-wrap">
+        <router-link to="/about" class="display-1 go-right" tag="span" exact> 
+        <v-icon large class="pr-3">fa-arrow-right</v-icon><br>about
+      </router-link>
+    </v-card-actions>
   </v-app>
 </template>
 
@@ -23,6 +27,13 @@ export default {
     return {
       drawer: true
     };
+  },
+  computed:{
+    isHome(){
+      // eslint-disable-next-line no-console
+      console.log(this.$route.name);
+      return (this.$route.name === 'home')
+    }
   }
 };
 
@@ -50,11 +61,24 @@ export default {
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  align-self: flex-end;
 }
 .go-right{
   opacity: 0.7;
   cursor: pointer;
-  text-align end;
+  text-align: end;
+}
+.go-right-wrap{
+  align-self: flex-end;
+    z-index:2;
+
+}
+.go-left{
+  opacity: 0.7;
+  cursor: pointer;
+  text-align: start;
+}
+.go-left-wrap{
+  align-self: flex-start;
+  z-index 2;
 }
 </style>
