@@ -1,28 +1,22 @@
 <template>
   <v-app id="inspire" dark>
-    <v-toolbar app fixed clipped-left color="primary" class="white--text">
-      <v-toolbar-title>
-        <router-link to="/" tag="span" exact :style="{ cursor: 'pointer'}">Home</router-link>
-      </v-toolbar-title>
-       <v-spacer></v-spacer>
-      <v-toolbar-items>
-        <v-btn flat>
-          <router-link to="/about" tag="span" exact :style="{ cursor: 'pointer'}">About</router-link>
-        </v-btn>
-        <v-btn flat>
-           <router-link to="/timelines" tag="span" exact :style="{ cursor: 'pointer'}">Timelines</router-link>
-        </v-btn>
-        <v-btn flat>Contact</v-btn>
-      </v-toolbar-items>
-    </v-toolbar>
-    <v-content class="my-background">
-      <v-container fluid fill-height>
-          <v-flex>
-            <router-view/>
-          </v-flex>
+        <v-card-actions v-if="!isHome" class="absolute-vertical go-left-wrap">
+        <router-link to="/" class="display-1 go-left" tag="span" exact> 
+        <v-icon large class="pr-3">fa-arrow-left</v-icon><br>home
+      </router-link>
+    </v-card-actions>
+    <v-content >
+      <v-container fill-height>
+        <transition name="page" mode="out-in">
+          <router-view/>
+        </transition>
       </v-container>
     </v-content>
-
+    <v-card-actions v-if="isHome"  class="absolute-vertical go-right-wrap">
+        <router-link to="/about" class="display-1 go-right" tag="span" exact> 
+        <v-icon large class="pr-3">fa-arrow-right</v-icon><br>about
+      </router-link>
+    </v-card-actions>
   </v-app>
 </template>
 
@@ -34,27 +28,57 @@ export default {
       drawer: true
     };
   },
-  methods: {
-    greet: function(event) {
-      // `event` is the native DOM event
-      alert(event.target.tagName);
+  computed:{
+    isHome(){
+      // eslint-disable-next-line no-console
+      console.log(this.$route.name);
+      return (this.$route.name === 'home')
     }
   }
 };
 
-//   background-image: url('https://source.unsplash.com/tqzqzH8hb5A/1600x900') !important;
 </script>
 <style lang="stylus">
-.my-background {
+.codance {
   background-image: url('assets/codance.svg') !important;
-  background-size: cover;
+  background-size: contain;
 }
 @media only screen and (max-width: 768px) {
   .my-background {
     background-position: center; 
   }
 }
-html {
-  overflow: auto
+.page-enter-active, .page-leave-active {
+  transition: opacity 1s, transform 1s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+  transform: translateX(-70%);
+}
+.absolute-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.go-right{
+  opacity: 0.7;
+  cursor: pointer;
+  text-align: end;
+}
+.go-right-wrap{
+  align-self: flex-end;
+    z-index:2;
+
+}
+.go-left{
+  opacity: 0.7;
+  cursor: pointer;
+  text-align: start;
+}
+.go-left-wrap{
+  align-self: flex-start;
+  z-index 2;
 }
 </style>
