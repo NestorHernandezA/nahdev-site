@@ -7,8 +7,7 @@
         <h4 class="subheading text-md-center text-sm-center">
             <div class="about-content"><p>
             Born in Mexico, raised in Texas and currently based on Indianapolis. Currently with 4 years of experience on the 
-            industry of software development, It all started in 2008 maybe earlier. I have always been passionate about coding,
-            to the point that I had the coolest MySpace profile (says me) in middle school, thanks to HTML (Yea,I know now, this is a markup language).
+            industry of software development.
             </p>
             <p>
             In 2010 i started to pursue a degree in Software Engineering at the University of Dallas in Texas. After graduating in 2015, 
@@ -17,8 +16,8 @@
             salsa.
             </p>
             <p>
-            During this time in the industry,  I have become even more passionate about my career. Every year since i started, has brought new challanges
-            that i have embraced and actually enjoyed and cannot wait for whatever the future holds.
+            During this time in the industry, I have become even more passionate about my career, 
+            specifically programming and developing with new emerging technologes.
             </p>
             </div>
         </h4>
