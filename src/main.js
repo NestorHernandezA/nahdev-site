@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import router from './router'
 import './plugins/vuetify'
+import './plugins/markdown'
 import App from './App.vue'
 
 Vue.config.productionTip = false
