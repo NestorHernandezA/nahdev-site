@@ -39,16 +39,16 @@
 import FunSwitch from "../components/FunSwitch.vue";
 import Contact from "../components/ContactLinks.vue";
 
+
 export default {
   name: "home",
   components: {
     FunSwitch,
-    Contact
-  },
-  mounted: function() {},
+     Contact  },
   data() {
     return {
-      code: true
+      code: true,
+      cms: {}
     };
   },
   methods: {

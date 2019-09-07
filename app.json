@@ -25,6 +25,12 @@
     },
     "OKTA_CLIENT_ID": {
       "required": true
+    },
+    "VUE_APP_CONTENTFUL_SPACE":{
+      "required": true
+    },
+    "VUE_APP_CONTENTFUL_ACCESS_TOKEN":{
+      "required": true
     }
   },
   "formation": {
