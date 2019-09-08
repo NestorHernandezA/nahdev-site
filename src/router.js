@@ -32,11 +32,6 @@ export default new Router({
           }
         ]
       }
-    },
-    {
-      path: '/timelines',
-      name: 'timelines',
-      component: Timelines
     }
   ]
 })
