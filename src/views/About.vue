@@ -68,6 +68,8 @@ export default {
 }
 
 .about-content {
-  padding: 40px 130px;
+  padding: 2em 2em;
 }
+
 </style>
+

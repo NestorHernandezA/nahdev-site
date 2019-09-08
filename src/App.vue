@@ -1,8 +1,8 @@
 <template>
   <v-app id="inspire" dark>
         <v-card-actions v-if="!isHome" class="absolute-vertical go-left-wrap">
-        <router-link to="/" class="display-1 go-left" tag="span" exact> 
-        <v-icon large class="pr-3">fa-arrow-left</v-icon><br>home
+        <router-link to="/" class="go-left" tag="span" exact> 
+        <v-icon medium class="pr-3">fa-arrow-left</v-icon><br>home
       </router-link>
     </v-card-actions>
     <v-content >
@@ -13,8 +13,8 @@
       </v-container>
     </v-content>
     <v-card-actions v-if="isHome"  class="absolute-vertical go-right-wrap">
-        <router-link to="/about" class="display-1 go-right" tag="span" exact> 
-        <v-icon large class="pr-3">fa-arrow-right</v-icon><br>about
+        <router-link to="/about" class="go-right" tag="span" exact> 
+        <v-icon medium class="pr-3">fa-arrow-right</v-icon><br>about
       </router-link>
     </v-card-actions>
   </v-app>
@@ -64,21 +64,43 @@ export default {
 }
 .go-right{
   opacity: 0.7;
+  font-size: 24px;
   cursor: pointer;
   text-align: end;
 }
 .go-right-wrap{
   align-self: flex-end;
-    z-index:2;
+  z-index:2;
 
 }
 .go-left{
   opacity: 0.7;
+  font-size: 24px;
   cursor: pointer;
   text-align: start;
 }
 .go-left-wrap{
   align-self: flex-start;
   z-index 2;
+}
+@media only screen and (max-width: 600px) {
+  .go-left{
+    opacity: 0.7;
+    cursor: pointer;
+    text-align: start;
+  }
+  .go-left-wrap{
+    display:none
+  }
+  .go-right{
+    opacity: 0.7;
+    cursor: pointer;
+    text-align: end;
+  }
+  .go-right-wrap{
+    align-self: flex-end;
+    z-index:2;
+
+  }
 }
 </style>
