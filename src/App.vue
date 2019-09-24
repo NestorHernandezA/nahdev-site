@@ -6,9 +6,9 @@
       </router-link>
     </v-card-actions>
     <v-content >
-      <v-container fill-height>
+      <v-container :class="background" fill-height>
         <transition name="page" mode="out-in">
-          <router-view/>
+          <router-view v-on:switch-change="backgroundChange"/>
         </transition>
       </v-container>
     </v-content>
@@ -25,23 +25,33 @@ export default {
   name: "App",
   data() {
     return {
-      drawer: true
+      background: 'code'
     };
   },
   computed:{
     isHome(){
-      // eslint-disable-next-line no-console
-      console.log(this.$route.name);
       return (this.$route.name === 'home')
+    }
+  },
+  methods:{
+    backgroundChange(){
+      if(this.background === 'code') this.background = 'dance';
+      else this.background = 'code'
     }
   }
 };
 
 </script>
 <style lang="stylus">
-.codance {
-  background-image: url('assets/codance.svg') !important;
-  background-size: contain;
+.code {
+  background-image: url('assets/brackets.png') !important;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.dance {
+  background-image: url('assets/dance.png') !important;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 @media only screen and (max-width: 768px) {
   .my-background {
