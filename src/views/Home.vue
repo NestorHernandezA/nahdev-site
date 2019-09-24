@@ -3,7 +3,7 @@
     row
     wrap
     align-center
-    class="welcome text-md-center text-sm-center text-xs-center"
+    class="text-md-center text-sm-center text-xs-center"
   >
     <v-flex xs12>
       <v-layout
@@ -54,16 +54,10 @@ export default {
   methods: {
     handleToggle: function() {
       this.code = !this.code;
-      if (!this.code) {
-        // Light up dancing
-      }
-      // Light up coding
+      this.$emit('switch-change', this.code);
     }
   }
 };
 </script>
 <style>
-.welcome {
-  opacity: 0.7;
-}
 </style>
