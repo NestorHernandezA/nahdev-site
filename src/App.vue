@@ -12,11 +12,20 @@
         </transition>
       </v-container>
     </v-content>
-    <v-card-actions v-if="isHome"  class="absolute-vertical go-right-wrap">
+    <div class="absolute-vertical go-right-wrap"> 
+          <v-card-actions v-if="isHome"  >
         <router-link to="/about" class="go-right" tag="span" exact> 
         <v-icon medium class="pr-3">fa-arrow-right</v-icon><br>about
       </router-link>
     </v-card-actions>
+    <br>
+        <v-card-actions v-if="isHome"  >
+        <router-link to="/about-technology" class="go-right" tag="span" exact> 
+        <v-icon medium class="pr-3">fa-arrow-right</v-icon><br>technology
+      </router-link>
+    </v-card-actions>
+    </div>
+
   </v-app>
 </template>
 
@@ -74,9 +83,7 @@ export default {
 }
 .go-right{
   opacity: 0.7;
-  font-size: 24px;
   cursor: pointer;
-  text-align: end;
 }
 .go-right-wrap{
   align-self: flex-end;
@@ -105,7 +112,6 @@ export default {
   .go-right{
     opacity: 0.7;
     cursor: pointer;
-    text-align: end;
   }
   .go-right-wrap{
     align-self: flex-end;
