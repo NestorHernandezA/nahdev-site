@@ -1,5 +1,10 @@
 <template>
   <v-app id="inspire" dark>
+        <v-card-actions v-if="!isHome" class="absolute-vertical go-left-wrap">
+        <router-link to="/" class="go-left" tag="span" exact> 
+        <v-icon medium class="pr-3">fa-arrow-left</v-icon><br>home
+      </router-link>
+    </v-card-actions>
     <v-content >
       <v-container :class="background" fill-height>
         <transition name="page" mode="out-in">
@@ -7,43 +12,11 @@
         </transition>
       </v-container>
     </v-content>
-    <div id="navigation">
-    <v-btn
-        flat
-        color="white"
-        @mouseover="showNav = true"
-    >
-        <v-icon>fa-arrow-up</v-icon>
-    </v-btn>
-    <v-bottom-nav
-    center
-      :active.sync="activeBtn"
-      :value="showNav"
-      absolute
-      dark
-      @click="showNav = false"
-
-    >
-    <router-link to="/about" tag="span" exact> 
-            <v-btn flat color="white">
-              <span>About</span>
-              <v-icon>fa-male</v-icon>
-            </v-btn>
+    <v-card-actions v-if="isHome"  class="absolute-vertical go-right-wrap">
+        <router-link to="/about" class="go-right" tag="span" exact> 
+        <v-icon medium class="pr-3">fa-arrow-right</v-icon><br>about
       </router-link>
-     <router-link to="/" tag="span" exact> 
-      <v-btn flat color="white">
-        <span>Home</span>
-        <v-icon>fa-home</v-icon>
-      </v-btn>
-     </router-link>
-    <router-link to="/about-technology" tag="span" exact> 
-      <v-btn flat color="white">
-        <span>Skills</span>
-        <v-icon>fa-book</v-icon>
-      </v-btn>
-       </router-link>
-    </v-bottom-nav>
-    </div>
+    </v-card-actions>
   </v-app>
 </template>
 
@@ -52,9 +25,7 @@ export default {
   name: "App",
   data() {
     return {
-      background: 'code',
-      activeBtn: 1,
-      showNav: false
+      background: 'code'
     };
   },
   computed:{
@@ -94,9 +65,52 @@ export default {
   opacity: 0;
   transform: translateX(-70%);
 }
-#navigation{
-  text-align: center;
+.absolute-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
+.go-right{
+  opacity: 0.7;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: end;
+}
+.go-right-wrap{
+  align-self: flex-end;
+  z-index:2;
 
+}
+.go-left{
+  opacity: 0.7;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: start;
+}
+.go-left-wrap{
+  align-self: flex-start;
+  z-index 2;
+}
+@media only screen and (max-width: 600px) {
+  .go-left{
+    opacity: 0.7;
+    cursor: pointer;
+    text-align: start;
+  }
+  .go-left-wrap{
+    display:none
+  }
+  .go-right{
+    opacity: 0.7;
+    cursor: pointer;
+    text-align: end;
+  }
+  .go-right-wrap{
+    align-self: flex-end;
+    z-index:2;
 
+  }
+}
 </style>

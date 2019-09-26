@@ -5,7 +5,7 @@
         <v-layout row wrap>
           <v-flex class="tech-cards"
             v-for="{ fields: { description, technologyLogo, title } } in techCards" :key="title">
-            <v-card color="darken-4" style="height:100%" class="white--text">
+            <v-card color=" darken-4" class="white--text">
               <v-layout>
                 <v-flex xs5>
                   <v-img
@@ -18,7 +18,7 @@
                   <v-card-title primary-title>
                     <div>
                       <div class="headline"> {{ title }}</div>
-                      <div><vue-markdown :source="description"></vue-markdown></div>
+                      <div>{{ description }}</div>
                     </div>
                   </v-card-title>
                 </v-flex>
@@ -73,10 +73,8 @@ export default {
 </script>
 <style lang="stylus">
 .tech-container {
-  position: absolute;
-  height:100% ;
+  position: absolute; 
   top: 5px;
-  overflow: scroll;
 }
 
 .tech-cards{
