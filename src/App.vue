@@ -1,7 +1,7 @@
 <template>
   <v-app id="inspire" dark>
     <v-content >
-      <v-container :class="background" fill-height>
+      <v-container :class="background" fill-height @mouseover="hideNav()">
         <transition name="page" mode="out-in">
           <router-view v-on:switch-change="backgroundChange"/>
         </transition>
@@ -10,6 +10,8 @@
     <div id="navigation">
     <v-btn
         flat
+        v-if="!isMobile()"
+        style="width:100%"
         color="white"
         @mouseover="showNav = true"
     >
@@ -21,21 +23,19 @@
       :value="showNav"
       absolute
       dark
-      @click="showNav = false"
-
     >
+    <router-link to="/" tag="span" exact> 
+      <v-btn flat color="white">
+        <span>Home</span>
+        <v-icon>fa-home</v-icon>
+      </v-btn>
+     </router-link>
     <router-link to="/about" tag="span" exact> 
             <v-btn flat color="white">
               <span>About</span>
               <v-icon>fa-male</v-icon>
             </v-btn>
       </router-link>
-     <router-link to="/" tag="span" exact> 
-      <v-btn flat color="white">
-        <span>Home</span>
-        <v-icon>fa-home</v-icon>
-      </v-btn>
-     </router-link>
     <router-link to="/about-technology" tag="span" exact> 
       <v-btn flat color="white">
         <span>Skills</span>
@@ -54,18 +54,31 @@ export default {
     return {
       background: 'code',
       activeBtn: 1,
-      showNav: false
+      showNav: (this.isMobile() | false)
     };
   },
   computed:{
     isHome(){
       return (this.$route.name === 'home')
-    }
+    },
   },
   methods:{
     backgroundChange(){
       if(this.background === 'code') this.background = 'dance';
       else this.background = 'code'
+    },
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+      return false
+    }
+  },
+   hideNav(){
+      if(this.isMobile()){
+        this.showNav = true
+      }
+      this.showNav = false
     }
   }
 };
