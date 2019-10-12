@@ -1,6 +1,5 @@
 'use strict'
 
-const pkg = require('./package.json')
 /**
  * New Relic agent configuration.
  *
