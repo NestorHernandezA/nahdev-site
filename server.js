@@ -7,7 +7,11 @@ const session = require('express-session');
 const { ExpressOIDC } = require('@okta/oidc-middleware');
 
 require('dotenv').config();
-require('newrelic');
+if(process.env.NEW_RELIC_ENABLE && process.env.NEW_RELIC_ENABLE === "true"){
+  console.log('New Relic Enabled');
+  require('newrelic');
+}
+
 
 const app = express();
 const port = process.env.PORT || 3000;
