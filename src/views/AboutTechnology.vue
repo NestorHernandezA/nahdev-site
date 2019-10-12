@@ -39,8 +39,6 @@ export default {
   mounted: async function() {
     try {
       this.cms = await contentful.getEntry(TECH);
-      // eslint-disable-next-line no-console
-      console.log(this.cms);
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
@@ -68,6 +66,8 @@ export default {
     return {
       cms: {}
     };
+  },
+  methods:{
   }
 };
 </script>

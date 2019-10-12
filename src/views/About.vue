@@ -57,7 +57,9 @@ export default {
     return {
       cms: {}
     };
-  }
+  },
+   methods:{
+  } 
 };
 </script>
 <style lang="stylus">

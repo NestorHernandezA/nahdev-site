@@ -54,6 +54,8 @@ export default {
   methods: {
     handleToggle: function() {
       this.code = !this.code;
+      const gaCodeValue = this.code ? 'code' : 'dance';
+      this.$ga.event('interaction', 'funswitch', 'codance', gaCodeValue)
       this.$emit('switch-change', this.code);
     }
   }
