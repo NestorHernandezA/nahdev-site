@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "test": "echo test success",
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
+    "dev": "./node_modules/.bin/vue-cli-service serve",
+    "build": "./node_modules/.bin/vue-cli-service build",
+    "lint": "./node_modules/.bin/vue-cli-service lint",
     "postinstall": "npm run build",
     "start": "node server.js"
   },
